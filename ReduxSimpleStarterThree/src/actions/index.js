@@ -10,8 +10,13 @@ export function fetchWeather(city) {
 	const url = `${ROOT_URL}&q=${city},us`;
 	const request = axios.get(url);
 
-	return (
-		type: FETCH_WEATHER,
+	console.log('Request:', request);
+
+	// Request is successful.  For whatever reason, it doesn't know what to return 
+	// for type, even when I make it a string literal.
+
+	return {
+		type: 'FETCH_WEATHER',
 		payload: request
-	);
+	};
 }
