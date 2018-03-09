@@ -9,7 +9,7 @@ class PostsIndex extends Component {
 	}
 
 	renderPosts() {
-		return _.map(this.props.posts, => {	//The equals sign is throwing an error.  Look at video - typo?
+		return _.map(this.props.posts, post => {
 			return (
 				<li className="list-group-item" key={post.id}>
 					{post.title}
